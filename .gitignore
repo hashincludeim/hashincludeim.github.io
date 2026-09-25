@@ -1,0 +1,6 @@
+# Local tooling
+.claude/
+.DS_Store
+
+# Original CV export (the published copy lives in assets/)
+Hashim_Mohamed_Salim_FlowCV_Resume_*.pdf

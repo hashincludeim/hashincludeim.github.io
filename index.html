@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hashim Mohamed Salim — Application Developer</title>
+  <meta name="description" content="Hashim Mohamed Salim is an application developer in Nottingham, UK, who builds scalable Django and .NET platforms. He holds an MSc in Financial Technology (Distinction) and has worked on machine learning and blockchain projects.">
+  <meta name="author" content="Hashim Mohamed Salim">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hashim Mohamed Salim — Application Developer">
+  <meta property="og:description" content="Scalable software, built by a developer with a FinTech background.">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#f6f6f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07080a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') d.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ───────────── Navigation ───────────── -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="Hashim Salim, back to top">
+        <span class="brand__mark" aria-hidden="true">HS</span>
+        <span class="brand__name">Hashim Salim</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <span class="nav__pill" aria-hidden="true"></span>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="cmd-btn" type="button" data-open-palette aria-label="Open command menu">
+          <i data-icon="search"></i><span class="cmd-btn__label">Search</span><kbd data-kbd-mod>⌘K</kbd>
+        </button>
+        <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle colour theme">
+          <i data-icon="sun" class="only-dark"></i><i data-icon="moon" class="only-light"></i>
+        </button>
+        <button class="icon-btn nav__menu-btn" type="button" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <i data-icon="menu" class="i-open"></i><i data-icon="x" class="i-close"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <nav aria-label="Mobile">
+      <a href="#about" style="--i:0"><span>01</span>About</a>
+      <a href="#experience" style="--i:1"><span>02</span>Experience</a>
+      <a href="#projects" style="--i:2"><span>03</span>Projects</a>
+      <a href="#skills" style="--i:3"><span>04</span>Skills</a>
+      <a href="#education" style="--i:4"><span>05</span>Education</a>
+      <a href="#achievements" style="--i:5"><span>06</span>Beyond work</a>
+      <a href="#contact" style="--i:6"><span>07</span>Contact</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <a class="btn btn--primary" href="mailto:hashimmohdsalim@gmail.com" data-email-link><i data-icon="mail"></i>Email me</a>
+      <a class="btn btn--ghost" href="assets/Hashim_Mohamed_Salim_CV.pdf" download><i data-icon="download"></i>CV</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ───────────── Hero ───────────── -->
+    <section class="hero" id="top" aria-label="Introduction">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+
+      <div class="container hero__inner">
+        <p class="status intro" id="status" style="--d:0ms">
+          <span class="status__dot" aria-hidden="true"></span><span id="statusText">Open to new opportunities</span>
+        </p>
+        <h1 class="hero__title" data-split>Hashim Mohamed Salim</h1>
+
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <p class="hero__tagline intro" style="--d:420ms">Engineering scalable software, <br class="br-wide">with a <em>FinTech</em> edge.</p>
+            <p class="hero__lede intro" style="--d:540ms">
+              Application developer at the University of Nottingham, building Django&nbsp;&amp;&nbsp;.NET platforms at scale.
+              I hold an MSc in Financial Technology with Distinction, and I’ve built projects in machine learning and blockchain.
+            </p>
+            <div class="hero__cta intro" style="--d:660ms">
+              <a class="btn btn--primary magnetic" href="#projects">View my work <i data-icon="arrow-right"></i></a>
+              <a class="btn btn--ghost magnetic" href="assets/Hashim_Mohamed_Salim_CV.pdf" download>Download CV <i data-icon="download"></i></a>
+              <span class="hero__hint">or press <kbd data-kbd-mod>⌘K</kbd></span>
+            </div>
+          </div>
+
+          <!-- Code card: typed in on load, tilts with the pointer, and "Run" prints its output. -->
+          <figure class="hero__visual" style="--d:620ms">
+            <figcaption class="sr-only">
+              Hashim written as a Python class: based in Nottingham, UK, working as an Application Developer,
+              with a stack of Python, Django and .NET, across FinTech, machine learning and Web3.
+            </figcaption>
+            <div class="code-card" id="codeCard">
+              <div class="code-card__bar">
+                <span class="code-card__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="code-card__file">hashim.py</span>
+                <span class="code-card__lang">Python</span>
+                <button class="code-card__run" type="button" id="codeRun" aria-controls="codeOut">
+                  <i data-icon="play"></i><span>Run</span>
+                </button>
+              </div>
+              <code class="code-card__body" aria-hidden="true">
+                <span class="line"><span class="tk-k">from</span> career <span class="tk-k">import</span> <span class="tk-c">Engineer</span></span>
+                <span class="line"> </span>
+                <span class="line"><span class="tk-k">class</span> <span class="tk-c">Hashim</span><span class="tk-p">(</span><span class="tk-c">Engineer</span><span class="tk-p">):</span></span>
+                <span class="line">    <span class="tk-cm">"""Software engineer, FinTech edge."""</span></span>
+                <span class="line"> </span>
+                <span class="line">    based_in <span class="tk-p">=</span> <span class="tk-s">"Nottingham, UK"</span></span>
+                <span class="line line--hl">    role <span class="tk-p">=</span> <span class="tk-s">"Application Developer"</span></span>
+                <span class="line">    stack <span class="tk-p">= [</span><span class="tk-s">"Python"</span><span class="tk-p">,</span> <span class="tk-s">"Django"</span><span class="tk-p">,</span> <span class="tk-s">".NET"</span><span class="tk-p">]</span></span>
+                <span class="line">    domains <span class="tk-p">= [</span><span class="tk-s">"FinTech"</span><span class="tk-p">,</span> <span class="tk-s">"ML"</span><span class="tk-p">,</span> <span class="tk-s">"Web3"</span><span class="tk-p">]</span></span>
+                <span class="line"> </span>
+                <span class="line">    <span class="tk-k">def</span> <span class="tk-f">collaborate</span><span class="tk-p">(</span>self<span class="tk-p">):</span></span>
+                <span class="line">        <span class="tk-k">return</span> <span class="tk-s">"Let's build together."</span><span class="caret" aria-hidden="true"></span></span>
+              </code>
+              <div class="code-card__out" id="codeOut" aria-live="polite">
+                <div class="code-card__out-inner"><div class="code-card__out-body"></div></div>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+      <div class="container hero__meta intro" style="--d:820ms">
+        <div class="hero__meta-inner">
+          <p class="meta"><i data-icon="map-pin"></i><span>Nottingham, UK</span><span class="meta__sep" aria-hidden="true"></span><span class="meta__clock" data-clock>--:--</span></p>
+          <p class="meta"><span class="meta__label">Now</span><span>Application Developer · University of Nottingham</span></p>
+          <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Highlights ───────────── -->
+    <section class="container stats" aria-label="Highlights">
+      <div class="stats__grid" id="stats"></div>
+    </section>
+
+    <!-- ───────────── About ───────────── -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">01</span><span class="eyebrow__rule"></span><span data-scramble>About</span></p>
+          <h2 class="section__title">Engineer first. <br><em>Fluent in finance.</em></h2>
+        </header>
+        <div class="about">
+          <div class="about__text reveal">
+            <p class="about__lead">
+              I’m an application developer at the University of Nottingham. I build and maintain web platforms used by more than 50,000 people, along with the CI/CD pipelines that ship them.
+            </p>
+            <p>
+              My career spans three countries and two disciplines. I studied Computer Science Engineering in India, built logistics APIs and valuation models in Qatar, and earned a Distinction in Financial Technology in the UK.
+            </p>
+            <p>
+              That means I’m as comfortable reviewing a pull request as I am stress-testing a DCF, and I’m happiest on problems that need both.
+            </p>
+          </div>
+          <ul class="focus spot-group" id="focus" role="list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Experience ───────────── -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">02</span><span class="eyebrow__rule"></span><span data-scramble>Experience</span></p>
+          <h2 class="section__title">Experience across <br><em>code and capital.</em></h2>
+          <p class="section__sub">Five roles in the UK and Qatar, from production web platforms to valuation models and machine-learning research.</p>
+        </header>
+        <div class="timeline-wrap spot-group">
+          <div class="timeline__rail" aria-hidden="true"><span class="timeline__fill"></span></div>
+          <ol class="timeline" id="timeline"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Projects ───────────── -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section__head section__head--split reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__num">03</span><span class="eyebrow__rule"></span><span data-scramble>Projects</span></p>
+            <h2 class="section__title">Selected <em>work.</em></h2>
+          </div>
+          <p class="section__sub">From audio fingerprinting to smart-contract insurance: a selection of projects I’ve designed and built.</p>
+        </header>
+        <div class="filters reveal" id="filters" role="group" aria-label="Filter projects by discipline">
+          <span class="filters__pill" aria-hidden="true"></span>
+        </div>
+        <div class="projects spot-group" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <!-- ───────────── Skills ───────────── -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">04</span><span class="eyebrow__rule"></span><span data-scramble>Skills</span></p>
+          <h2 class="section__title">Skills, <em>backed by evidence.</em></h2>
+          <p class="section__sub">Select a skill to see where I’ve used it in my roles, projects and studies.</p>
+        </header>
+        <div class="skills">
+          <div class="skills__groups reveal" id="skillGroups"></div>
+          <aside class="skills__panel spot-group reveal" aria-label="Where this skill was used">
+            <div class="panel spot" id="skillPanel" aria-live="polite"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Education ───────────── -->
+    <section class="section" id="education">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">05</span><span class="eyebrow__rule"></span><span data-scramble>Education</span></p>
+          <h2 class="section__title">Trained in <em>computer science</em> and <em>finance.</em></h2>
+        </header>
+        <div class="edu spot-group" id="edu"></div>
+      </div>
+    </section>
+
+    <!-- ───────────── Achievements ───────────── -->
+    <section class="section" id="achievements">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__num">06</span><span class="eyebrow__rule"></span><span data-scramble>Beyond work</span></p>
+          <h2 class="section__title">Beyond the <em>day job.</em></h2>
+          <p class="section__sub">Competitions, certifications, leadership and the causes I show up for.</p>
+        </header>
+        <div class="bento spot-group" id="bento"></div>
+      </div>
+    </section>
+
+    <!-- ───────────── Contact ───────────── -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="reveal">
+          <p class="eyebrow"><span class="eyebrow__num">07</span><span class="eyebrow__rule"></span><span data-scramble>Contact</span></p>
+          <h2 class="contact__title">Have a role in mind? <br><em>Let’s talk.</em></h2>
+          <p class="contact__text">Whether it’s a role, a project or a conversation about FinTech, my inbox is always open.</p>
+          <div class="contact__email">
+            <a href="mailto:hashimmohdsalim@gmail.com" data-email-link data-email-text>hashimmohdsalim@gmail.com</a>
+            <button class="icon-btn icon-btn--round" type="button" data-copy-email aria-label="Copy email address">
+              <i data-icon="copy" class="i-copy"></i><i data-icon="check" class="i-check"></i>
+            </button>
+          </div>
+          <div class="contact__links" id="contactLinks"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <span>© <span data-year>2026</span> Hashim Mohamed Salim</span>
+      <span class="footer__hint">Press <kbd data-kbd-mod>⌘K</kbd> to jump anywhere</span>
+      <a class="footer__top" href="#top">Back to top <i data-icon="arrow-up"></i></a>
+    </div>
+    <div class="wordmark" aria-hidden="true">Hashim Salim</div>
+  </footer>
+
+  <!-- ───────────── Command palette ───────────── -->
+  <div class="palette" id="palette" hidden>
+    <div class="palette__backdrop" data-close-palette></div>
+    <div class="palette__panel" role="dialog" aria-modal="true" aria-label="Command menu">
+      <div class="palette__search">
+        <i data-icon="search"></i>
+        <input id="paletteInput" type="text" placeholder="Search sections, projects or actions…" autocomplete="off" spellcheck="false"
+               role="combobox" aria-expanded="true" aria-controls="paletteList" aria-autocomplete="list">
+        <kbd>esc</kbd>
+      </div>
+      <ul class="palette__list" id="paletteList" role="listbox" aria-label="Results"></ul>
+      <div class="palette__foot">
+        <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+        <span><kbd>↵</kbd> select</span>
+        <span><kbd>esc</kbd> close</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
